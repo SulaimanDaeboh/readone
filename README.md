@@ -13,3 +13,11 @@ git push -u origin master
 -u : เอาไว้จำ parameter origin master ต่อไปก็แค่พิมพ์ git push
 origin : คือชื่อ alias ของ remote (github)
 master : คือชื่อ branch ที่เราต้องการ push ขึ้นไป
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
