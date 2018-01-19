@@ -61,4 +61,12 @@ git checkout test.txt
 git add .
 git commit -m "your message"
 git push
+
+git add .
+git stash	(เป็นการ hide your update)
+git pull
+git stash pop	(เป็นการ recove file)
+git add .
+git commit -m "....."
+git push
 ```
