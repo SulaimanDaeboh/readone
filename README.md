@@ -46,6 +46,19 @@ git reset HEAD ชื่อไฟล์.???
 คำสั่งย้อนกลับ หลังจากเรา save ไปแล้วหลังจากก็พิมพ์คำสั่งนี้ด้วย git checkout --ชื่อไฟล์.??? (discard add)
 ```
 ```
-git reset --soft "HEAD^"
+git reset --soft "HEAD^" ชื่อไฟล์.???
 คำสั่งย้อนกลับ (discard commit)
+```
+```
+git rm ชื่อไฟล์.???
+คำสั่งลบไฟล์ (delete file,after commit)
+```
+```
+Recovery
+git reset HAED test.txt
+git checkout test.txt
+
+git add .
+git commit -m "your message"
+git push
 ```
