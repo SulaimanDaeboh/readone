@@ -1,33 +1,59 @@
-Basic
-By MAN SD
+# Basic add Dev.md
+### By MAN SD
+
+```
 git init
 เป็นคำสั่งที่เอาไว้เพื่อสร้าง git repository เปล่าๆขึ้นมา โดย Git จะทำการสร้างโฟลเดอร์  .git ขึ้นมาภายในโปรเจ็คของเรา (Hidden ไว้อยู่) 
+```
+```
 git add README
 เป็นคำสั่งอธิบายวิธีที่เราจะทำให้ไฟล์เราโดน track โดย Git ก็คือการใช้ git add README
+```
+```
 git commit -m "add sample index page"
 เราจะทำการ commit ด้วยคำสั่ง git commit -m "YOUR MESSAGE" ฉะนั้น commit แรกผมจะใส่ข้อความบอกไว้ว่า ได้ทำการเพิ่มไฟล์ index แล้วนะ
+```
+```
 git remote add origin git@github.com:SulaimanDaeboh/readone.git
 เป็นคำสั่งที่เพิ่ม url ของ remote (Server) เพื่อให้รู้ว่าเราจะฝากโค๊ดไว้ที่ใด
 กลับมาที่เครื่องเรา
+```
+```
 git push -u origin master
 -u : เอาไว้จำ parameter origin master ต่อไปก็แค่พิมพ์ git push
 origin : คือชื่อ alias ของ remote (github)
 master : คือชื่อ branch ที่เราต้องการ push ขึ้นไป
+```
+```
 git clone https://github.com/SulaimanDaeboh/readone
 เป็นคำสั่ง clone โฟลเดอร์จาก git ลงเครื่องที่ใช้งาน
+```
+```
 git > abc.txt
 เป็นคำสั่ง copy คำสั่งของ git ทั้งหมดลงในไฟล์ abc.txt
+```
+```
 git status
 เพื่อตรวจสอบสถานะ repository ของเรา
-19/01/2018
+```
+#### 19/01/2018
+```
 git checkout ชื่อไฟล์.???
 คำสั่งการย้อนกลับ (discard edit)
+```
+```
 git reset HEAD ชื่อไฟล์.???
 คำสั่งย้อนกลับ หลังจากเรา save ไปแล้วหลังจากก็พิมพ์คำสั่งนี้ด้วย git checkout --ชื่อไฟล์.??? (discard add)
+```
+```
 git reset --soft "HEAD^" ชื่อไฟล์.???
 คำสั่งย้อนกลับ (discard commit)
+```
+```
 git rm ชื่อไฟล์.???
 คำสั่งลบไฟล์ (delete file,after commit)
+```
+```
 Recovery
 git reset HAED test.txt
 git checkout test.txt
@@ -43,3 +69,84 @@ git stash pop	(เป็นการ recove file)
 git add .
 git commit -m "....."
 git push
+```
+```
+credit X
+```
+```
+> `$ git init` คำสั่ง git init เอาไว้เพื่อสร้าง git repository เปล่าๆขึ้นมา โดย Git จะทำการสร้างโฟลเดอร์  .git ขึ้นมาภายในโปรเจ็คของเรา (Hidden ไว้อยู่)
+
+> `$ git add .` track ทุกไฟล์ที่อยู่ในโฟลเดอร์ 
+
+> `$ git commit -m "Hello it's my first project commit"` คือการสร้าง snapshot ให้กับ repository ทำให้เราสามารถย้อนกลับมาดูว่าเราเปลี่ยนหรือแก้ไขโค๊ดอะไรไปบ้างได้
+
+> `$ git remote add origin git@github.com:SirawichDev/markdown_readme.git` เพิ่ม url ของ remote (Server) เพื่อให้รู้ว่าเราจะฝากโค๊ดไว้ที่ใด
+
+> `$ git push -u origin master` ต่อมาเราจะทำการส่งโค๊ดจากเครื่อง local ไปที่ Github ด้วยคำสั่ง
+ 
+> **Tip 1:**  ถ้าต้องการ track ไฟล์หรือโฟลเดอร์ทั้งหมดที่อยู่ในโฟลเดอร์โปรเจคเดียวสามารถใช้  `$ git add .` แทนที่ จะ add ไปทีละตัว.
+
+> **Tip 2:** เมื่อ ทำ `$ git push -u origin master` ไปครั้งแรกแล้วครั้งอื่นๆสามารถทำ `$ git push` อย่าได้เลยโดย ตัด ~~-u origin master~~ ออกโดยbranch ที่push เข้าไปจะเป็น branchล่าสุด
+
+> **Tip 3:** เมื่อมีปัญหา ไฟล์ในdesktop กับ ในเซิฟเวอร์ไม่ตรงกัน ให้ใช้คำสั่ง  `$ git pull` โดย  `$ git pull` = `$ git fetch` + `$ git merge`
+
+> **Tip 4:** เมื่ออยาก undo ไฟล์ ที่เราต้องการที่อยู่ในเซิฟเวอร์ `$ git checkout -- [Filename]`
+
+> **Tip 5:** เมื่อ Addไปแล้วต้องการ ที่จะuntrack ให้ใช่คำสั่ง `$ git reset HEAD [Filename]`
+
+> **Tip 6:** เช็คว่าเราทำอะไรไปบ้าง ให้ใช้ `$ git log` 
+
+> **Tip 7:** ถอด commit ออก ใช้คำสั่ง `$ git reset --soft "HEAD^"`
+
+> **TIP 8:** `$ git branch -a` ดูว่ามี branch อะไรบ้าง
+
+> **TIP 9:** `$ git branch (nameofbranch)` สร้าง branch ขึ้นมาใหม่
+
+> **TIP 10:** เปลี่ยน branch ใช้คำสั่ง `$ git checkout [nameofbranch]` 
+
+> **TIP 11:** ถ้าต้องการ สร้าง branch พร้อม switch ไปที่ branch นั้นเลย ใช้คำสั่ง `$ git checkout -b [nameofbranch]`     
+
+> **TIP 12:** ถ้าต้องการลบ branch นั้นออกใช้คำสั่ง `$ git branch -d [nameofbranch]` ต้องอย่าให้ branchปัจจุบันเป็น branch นั้นด้วย ถึงจะลบได้.
+
+> **Tip 13** ถ้าต้องการ รวมไฟล์ที่อยุ่ใน branch dev มาใส่ใน branch master ย้ายไป masterก่อน แล้วใช้คำสั่ง
+`$ git merge [nameofbranch] `
+
+<h2> Reference </h2>
+
+* [DEVAHOY](https://devahoy.com/posts/introduction-to-git-and-github/)
+* [guides.github](https://guides.github.com/features/mastering-markdown/)
+
+
+* [Git Merge --on-ff อธิบาย 1](http://www.artit-k.com/how-to-git-config-merge-no-fast-forward/)
+* [Git Merge --no-ff อธิบาย 2](https://sites.google.com/site/chanwit/blogs/git-explained-branch-and-merge)
+* [สำหรับคนที่อยาก Push แบบไม่ต้องใส่รหัสซ้ำๆ (rsa key)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+* [อันนี้ Mediumของอาจาร์ย วโรดมเกี่ยวกับ git (เข้าใจง่ายมาก)](https://werapun.com/git-review-8ecb03b7c8cc)
+
+<h2> HOMEWORK </h2>
+Create 2 new branches (dev, feature)
+dev: dev.md (lisyt command you have learn)
+
+feature: feature.md (list features in your project)
+
+merge master
+
+`git merge --no-ff dev`
+
+`git merge --no-ff feature`
+
+<h2>Update HomeWorks</h2>
+
+> **ทำไมถึงใช้?** : `git merge --no-ff [branchname]` ทำเมื่อ branch หลายๆ branch เวลา merge จะไปอยู่เส้นเดียวทำให้ดูยากมาก การแก้ปัญหาจึงนำ --no-ff มาใช้เพื่อทำให้ branch ที่สร้างขึ้นมาให้ แตกกิ่งก้านออกไป
+
+> **วิธีทำ(short)** : ทำการสร้าง branch ใหม่แล้วย้ายไป push เมื่อทำเสร็จแล้วให้ทำการกลับมายัง branch หลักแล้วทำการ merge แบบ no ff (no fast forward)แล้วเมื่อ แน่ใจจริงๆ ว่า branch นั้นเสร็จแล้วให้ทำการ push แล้วกลับมา merge ผลลัพธ์จะได้ network ของ branch ที่ดูง่ายสวยงาม **สามารถดูวิธีทำเพิ่มเติมได้ที่ Reference ที่อัพเดตให้**
+
+<h2>ถ้ามี Error Conflict</h2>
+
+> **วิธีแแก้** 
+
+* `git add -A`
+* `git commit -m "massage"`
+* `git push --force`
+* [ตามลิ้งค์นี้](https://githowto.com/resolving_conflicts)
+```
