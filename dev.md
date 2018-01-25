@@ -73,7 +73,6 @@ git push
 ```
 credit X
 ```
-```
 > `$ git init` คำสั่ง git init เอาไว้เพื่อสร้าง git repository เปล่าๆขึ้นมา โดย Git จะทำการสร้างโฟลเดอร์  .git ขึ้นมาภายในโปรเจ็คของเรา (Hidden ไว้อยู่)
 
 > `$ git add .` track ทุกไฟล์ที่อยู่ในโฟลเดอร์ 
@@ -149,4 +148,3 @@ merge master
 * `git commit -m "massage"`
 * `git push --force`
 * [ตามลิ้งค์นี้](https://githowto.com/resolving_conflicts)
-```
